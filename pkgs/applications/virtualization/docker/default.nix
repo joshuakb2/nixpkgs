@@ -137,9 +137,9 @@ let
       };
 
       moby-src = fetchFromGitHub {
-        owner = "moby";
+        owner = "joshuakb2";
         repo = "moby";
-        tag = mobyRev;
+        rev = mobyRev;
         hash = mobyHash;
       };
 
@@ -409,14 +409,14 @@ in
 
   docker_28 =
     let
-      version = "28.5.1";
+      version = "28.5.1-josh-1";
     in
     callPackage dockerGen {
       inherit version;
-      cliRev = "v${version}";
+      cliRev = "v28.5.1";
       cliHash = "sha256-iT5FLzX8Pg07V0Uo+07gy3ChP/WgLTPs/vtxnFVmCG8=";
-      mobyRev = "v${version}";
-      mobyHash = "sha256-IlkEK4UeQjZsojbahzLy/rP3WqJUWXG9nthmBSEj10M=";
+      mobyRev = "f231f3bbc058e184c5caa53b967d0344abbe3faf";
+      mobyHash = "sha256-Q+8HR+RA4OqkNjDa5MMiThDSuv4oqzAIhIGAwIYgcFs=";
       runcRev = "v1.3.0";
       runcHash = "sha256-oXoDio3l23Z6UyAhb9oDMo1O4TLBbFyLh9sRWXnfLVY=";
       containerdRev = "v1.7.28";
