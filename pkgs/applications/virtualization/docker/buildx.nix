@@ -6,13 +6,13 @@
 
 buildGoModule rec {
   pname = "docker-buildx";
-  version = "0.29.1";
+  version = "0.29.1-josh-1";
 
   src = fetchFromGitHub {
-    owner = "docker";
+    owner = "joshuakb2";
     repo = "buildx";
-    rev = "v${version}";
-    hash = "sha256-H7U44g4rw15c3Snx88YgAanSw4dWanmTugpGBIwfI6A=";
+    rev = "436a47654320d006c45de471a41eaf43c5314ac0";
+    hash = "sha256-DNmliQsFrzkxB6/1xiqmL6bI8oJaIKqrDVM/r81SkRE=";
   };
 
   doCheck = false;
@@ -22,8 +22,8 @@ buildGoModule rec {
   ldflags = [
     "-w"
     "-s"
-    "-X github.com/docker/buildx/version.Package=github.com/docker/buildx"
-    "-X github.com/docker/buildx/version.Version=v${version}"
+    "-X github.com/joshuakb2/buildx/version.Package=github.com/joshuakb2/buildx"
+    "-X github.com/joshuakb2/buildx/version.Version=v${version}"
   ];
 
   installPhase = ''
